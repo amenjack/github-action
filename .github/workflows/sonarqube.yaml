@@ -1,15 +1,5 @@
-name: SonarQube Code Analysis
-
-on:
-  pull_request:
-    branches:
-      - main
-      - develop
-  workflow_dispatch:
-
 jobs:
   sonar:
-    if: startsWith(github.head_ref, 'feature/')  # Run only if PR is from `feature/**`
     runs-on: ubuntu-latest
 
     steps:
